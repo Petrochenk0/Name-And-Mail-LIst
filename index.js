@@ -3,7 +3,7 @@ function formatMessage(users,fields){
     
     for(let i = 0;i<users.length;i++){
         for(let j = 0;j<fields.length;j++){
-            usersList = usersList + `${users[i][j]}`
+            usersList = usersList + `${users[i][j]}` // ???????
 
             usersList = `\n`;// new stroka
         }
