@@ -43,9 +43,9 @@ function init(){
 
         const newUser = createNewUser(fields); // create new peremen for hranit value person
 
-        users.push(newUser);
+        users.push(newUser); // Добавляем в массив users 
     }while(true)
-        // Добавляем в массив users 
+        
 
     alert(formatMessage(users,fields));
 
