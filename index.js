@@ -2,24 +2,22 @@ function formatMessage(users,fields){
     let usersList = `Spisok enter your person => name and email: \n`;
     
     for(let i = 0;i<users.length;i++){
-        for(let j = 0;j<fields.length;j++){
-            usersList = usersList + `${users[i][j]}`
-
-            usersList = `\n`;// new stroka
-        }
+        
+        usersList = `${users[i].name}  ${users[i].email}\n`;// new stroka
+        
     }
      return usersList
 }
 
 function createNewUser(fields){
-    let newUser = [];//massiv new users
+    let newUser = {};//massiv new users // теперь объект :)
 
     for(let i = 0; i< fields.length;i++){
         do{
-            const fieldValue = prompt(fields[i]); // fieldValue == enter person text
+            const fieldValue = prompt(fields[i].message); // fieldValue == enter person text //2.Образаемся к нашему текущему объекту поля
 
             if(fieldValue){ // if fildValue !== "" =>
-                newUser.push(fieldValue) // add in massiv newUser name and email
+                newUser[fieldValue[i].key] == fieldValue // add in massiv newUser name and email
                 break;//break == end 
             }
             users.push(newUser);// add in massiv newUser
@@ -32,7 +30,12 @@ function createNewUser(fields){
 function init(){
     const users = [];
 
-    const fields = ["Enter name", "Enter email"];//create phrase
+    const fields = [ // создали массив из объектов для удобства
+
+    {key:"name", message:"Enter name"},
+    {key:"email", message:"Enter email"}    
+        
+    ];//create phrase
 
     let isCreateYesOrNo; // letaer or chanel for person
 
