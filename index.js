@@ -1,9 +1,18 @@
+function Users(name, email){
+    this.name = name
+    this.email = email
+}
+
+Users.prototype.printInfo = function(){
+    return `${this.name} ${this.email}`
+}
+
 function formatMessage(users,fields){
     let usersList = `Spisok enter your person => name and email: \n`;
     
     for(let i = 0;i<users.length;i++){
         
-        usersList = `${users[i].name}  ${users[i].email}\n`;// new stroka
+        usersList = `${users[i].printInfo()}\n`;// new stroka
         
     }
      return usersList
@@ -25,6 +34,7 @@ function createNewUser(fields){
             fieldValue = ""; // remove text in fieldValue
         }while(true);
     }
+    return new Users(newUser.name, newUser.email)
 }
 
 function init(){
