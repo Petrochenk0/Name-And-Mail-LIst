@@ -1,4 +1,4 @@
-function Users(name, email){
+function Users({name, email}){
     this.name = name
     this.email = email
 }
