@@ -60,7 +60,7 @@ function init(){
     }while(true)
         
 
-    alert(formatMessage(users,fields));
+    alert(formatMessage({users,fields}));
 
 }
 init();
