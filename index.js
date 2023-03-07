@@ -10,6 +10,14 @@ Users.prototype.printInfo = function(){
 function formatMessage(users,fields){
     let usersList = `Spisok enter your person => name and email: \n`;
     
+    list,innerHTML = "";
+    
+    users.forEach((user)=>{
+    const listItem = document.querySelector("li")
+    listItem.textContent = user.printInfo();
+    list.appened(listItem)
+    })
+    
     for(let i = 0;i<users.length;i++){
         
         usersList = `${users[i].printInfo()}\n`;// new stroka
