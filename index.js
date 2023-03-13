@@ -5,9 +5,9 @@ class Users{
     }
 }
 
-Users.prototype.printInfo = function(){
-    return `${this.name} ${this.email}`
-}
+    getInfo(){
+        return `${this.name} ${this.email}`
+    }
 
 function formatMessage(users,fields){
     let usersList = `Spisok enter your person => name and email: \n`;
