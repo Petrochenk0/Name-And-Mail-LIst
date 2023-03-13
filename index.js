@@ -1,6 +1,8 @@
-class Users({name, email}){
-    this.name = name
-    this.email = email
+class Users{
+    constructor({name, email}){
+        this.name = name
+        this.email = email
+    }
 }
 
 Users.prototype.printInfo = function(){
