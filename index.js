@@ -4,7 +4,6 @@ class Users{
         this.email = email
     }
 }
-
     getInfo(){
         return `${this.name} ${this.email}`
     }
